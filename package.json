@@ -1,12 +1,12 @@
 {
-  "name": "firdaus-zickrian-portfolio",
+  "name": "bima-prasetio-portofolio",
   "version": "0.1.0",
-  "description": "My personal portfolio for AI, machine learning, and full-stack development projects.",
+  "description": "My personal portofolio for QA, Front-End, and Mobile-Development projects.",
   "license": "MIT",
   "author": {
-    "name": "Firdaus Khotibul Zickrian",
-    "email": "firdauskhotibulzickrian@gmail.com",
-    "url": "https://github.com/zickrian"
+    "name": "Bima Prasetio",
+    "email": "bimaprast1601@gmail.com",
+    "url": "https://github.com/bimamib"
   },
   "scripts": {
     "dev": "next dev",
