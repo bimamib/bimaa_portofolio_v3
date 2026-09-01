@@ -1,15 +1,15 @@
 @import "tailwindcss";
 
 @font-face {
-  font-family: "GeistSans";
-  src: url("/fonts/geist-sans-latin.woff2") format("woff2");
+  font-family: "SFPro";
+  src: url("/fonts/sf-pro-display-regular.otf") format("opentype");
   font-display: swap;
   font-style: normal;
   font-weight: 100 900;
 }
 
 @font-face {
-  font-family: "GeistSans Fallback";
+  font-family: "SFPro Fallback";
   src: local("Arial");
   ascent-override: 94.56%;
   descent-override: 27.76%;
@@ -18,8 +18,8 @@
 }
 
 @font-face {
-  font-family: "GeistMono";
-  src: url("/fonts/geist-mono-latin.woff2") format("woff2");
+  font-family: "SFMono";
+  src: url("/fonts/sf-mono-regular.otf") format("opentype");
   font-display: swap;
   font-style: normal;
   font-weight: 100 900;
@@ -166,7 +166,6 @@
 }
 
 @custom-variant data-open {
-
   &:where([data-state="open"]),
   &:where([data-open]:not([data-open="false"])) {
     @slot;
@@ -174,7 +173,6 @@
 }
 
 @custom-variant data-closed {
-
   &:where([data-state="closed"]),
   &:where([data-closed]:not([data-closed="false"])) {
     @slot;
@@ -182,7 +180,6 @@
 }
 
 @custom-variant data-checked {
-
   &:where([data-state="checked"]),
   &:where([data-checked]:not([data-checked="false"])) {
     @slot;
@@ -190,7 +187,6 @@
 }
 
 @custom-variant data-unchecked {
-
   &:where([data-state="unchecked"]),
   &:where([data-unchecked]:not([data-unchecked="false"])) {
     @slot;
@@ -204,7 +200,6 @@
 }
 
 @custom-variant data-disabled {
-
   &:where([data-disabled="true"]),
   &:where([data-disabled]:not([data-disabled="false"])) {
     @slot;
@@ -212,7 +207,6 @@
 }
 
 @custom-variant data-active {
-
   &:where([data-state="active"]),
   &:where([data-active]:not([data-active="false"])) {
     @slot;
@@ -232,9 +226,7 @@
 }
 
 @custom-variant retina {
-
-  @media (-webkit-min-device-pixel-ratio: 2),
-  (min-resolution: 2x) {
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2x) {
     @slot;
   }
 }
@@ -337,11 +329,11 @@
 }
 
 @utility prose-no-margin {
-  &> :first-child {
+  & > :first-child {
     @apply mt-0;
   }
 
-  &> :last-child {
+  & > :last-child {
     @apply mb-0;
   }
 
@@ -468,38 +460,54 @@
   @apply relative block h-37 overflow-hidden;
   color: var(--paper-ink);
   /* Faint dot texture, the tooth of the paper stock. */
-  background: radial-gradient(circle at 18% 24%,
-    color-mix(in oklab, var(--paper-ink) 4%, transparent) 0 0.5px,
-    transparent 0.75px),
-  var(--paper);
-  background-size: 13px 11px,
-  auto;
+  background:
+    radial-gradient(
+      circle at 18% 24%,
+      color-mix(in oklab, var(--paper-ink) 4%, transparent) 0 0.5px,
+      transparent 0.75px
+    ),
+    var(--paper);
+  background-size:
+    13px 11px,
+    auto;
 
   /* Airmail border: red/blue barber stripe on all four edges. */
   &::before {
     content: "";
     @apply pointer-events-none absolute inset-0 z-4;
     background:
-      repeating-linear-gradient(135deg,
-        var(--mail-red) 0 7px,
-        transparent 7px 14px,
-        var(--mail-blue) 14px 21px,
-        transparent 21px 28px) top / 100% 3px no-repeat,
-      repeating-linear-gradient(135deg,
-        var(--mail-red) 0 7px,
-        transparent 7px 14px,
-        var(--mail-blue) 14px 21px,
-        transparent 21px 28px) bottom / 100% 3px no-repeat,
-      repeating-linear-gradient(45deg,
-        var(--mail-red) 0 7px,
-        transparent 7px 14px,
-        var(--mail-blue) 14px 21px,
-        transparent 21px 28px) left / 3px 100% no-repeat,
-      repeating-linear-gradient(45deg,
-        var(--mail-red) 0 7px,
-        transparent 7px 14px,
-        var(--mail-blue) 14px 21px,
-        transparent 21px 28px) right / 3px 100% no-repeat;
+      repeating-linear-gradient(
+          135deg,
+          var(--mail-red) 0 7px,
+          transparent 7px 14px,
+          var(--mail-blue) 14px 21px,
+          transparent 21px 28px
+        )
+        top / 100% 3px no-repeat,
+      repeating-linear-gradient(
+          135deg,
+          var(--mail-red) 0 7px,
+          transparent 7px 14px,
+          var(--mail-blue) 14px 21px,
+          transparent 21px 28px
+        )
+        bottom / 100% 3px no-repeat,
+      repeating-linear-gradient(
+          45deg,
+          var(--mail-red) 0 7px,
+          transparent 7px 14px,
+          var(--mail-blue) 14px 21px,
+          transparent 21px 28px
+        )
+        left / 3px 100% no-repeat,
+      repeating-linear-gradient(
+          45deg,
+          var(--mail-red) 0 7px,
+          transparent 7px 14px,
+          var(--mail-blue) 14px 21px,
+          transparent 21px 28px
+        )
+        right / 3px 100% no-repeat;
     opacity: 0.45;
   }
 
@@ -507,7 +515,9 @@
     @apply absolute inset-x-0 bottom-0 h-2/3;
     clip-path: polygon(0 100%, 0 75%, 50% 25%, 100% 75%, 100% 100%);
     background: color-mix(in oklab, var(--paper-ink) 3%, var(--paper));
-    filter: drop-shadow(0 -1px 0 color-mix(in oklab, var(--paper-ink) 34%, transparent));
+    filter: drop-shadow(
+      0 -1px 0 color-mix(in oklab, var(--paper-ink) 34%, transparent)
+    );
   }
 
   /* Capped so a long sender name wraps inside the paper instead of sliding
@@ -516,7 +526,7 @@
     @apply absolute top-4 left-4 z-1 max-w-32 font-mono text-[7px] leading-[1.45] tracking-[0.08em];
     color: color-mix(in oklab, var(--paper-ink) 78%, transparent);
 
-    &>span {
+    & > span {
       @apply mb-px block text-[6px] tracking-[0.16em] opacity-72;
     }
   }
@@ -569,9 +579,11 @@
     &::after {
       content: "";
       @apply absolute top-2 left-[1.65rem] h-4 w-11;
-      background: repeating-linear-gradient(to bottom,
-          color-mix(in oklab, var(--paper-ink) 58%, transparent) 0 1px,
-          transparent 1px 5px);
+      background: repeating-linear-gradient(
+        to bottom,
+        color-mix(in oklab, var(--paper-ink) 58%, transparent) 0 1px,
+        transparent 1px 5px
+      );
     }
   }
 
@@ -583,7 +595,7 @@
     color: color-mix(in oklab, var(--paper-ink) 92%, transparent);
     word-break: break-all;
 
-    &>span {
+    & > span {
       @apply mb-1 text-[6px] tracking-[0.18em] break-normal opacity-68;
     }
   }
@@ -596,7 +608,7 @@
    Adapted from cali.so (MIT, © Cali Castle) onto this project's tokens. */
 
 @utility footer-tree {
-  &>ul {
+  & > ul {
     @apply flex flex-col;
   }
 
@@ -610,9 +622,11 @@
     content: "";
     position: absolute;
     left: 0;
-    background: color-mix(in oklab,
-        var(--color-muted-foreground) 22%,
-        transparent);
+    background: color-mix(
+      in oklab,
+      var(--color-muted-foreground) 22%,
+      transparent
+    );
   }
 
   & li::before {
@@ -628,7 +642,7 @@
     @apply top-1/2 h-px w-2.5;
   }
 
-  & li>* {
+  & li > * {
     @apply min-w-0 flex-1;
   }
 }
@@ -653,13 +667,13 @@
 @utility footer-stamp-lines {
   @apply flex flex-col gap-px font-handwritten text-[1.1rem] tracking-wide;
 
-  &>span {
+  & > span {
     @apply tracking-[0.08em];
     color: color-mix(in oklab, var(--color-muted-foreground) 72%, transparent);
   }
 
   & time,
-  &>span:last-child:not(:first-child) {
+  & > span:last-child:not(:first-child) {
     @apply block min-w-[8ch] tracking-[0.02em] whitespace-nowrap;
     color: color-mix(in oklab, var(--color-muted-foreground) 90%, transparent);
   }
@@ -750,10 +764,10 @@
 }
 
 :root {
-  --font-sans: "GeistSans", "GeistSans Fallback", Arial, sans-serif;
-  --font-mono: "GeistMono", ui-monospace, "SFMono-Regular", "Roboto Mono",
-    Menlo, Monaco, "Liberation Mono", "DejaVu Sans Mono", "Courier New",
-    monospace;
+  --font-sans: "SFPro", "SFPro Fallback", Arial, sans-serif;
+  --font-mono:
+    "SFMono", ui-monospace, "SFMono", "Roboto Mono", Menlo, Monaco,
+    "Liberation Mono", "DejaVu Sans Mono", "Courier New", monospace;
   --font-handwritten: "Caveat", "Caveat Fallback", cursive;
 
   /* Height of the fixed fade/blur overlay at the bottom of the viewport */
@@ -811,24 +825,26 @@
   --sidebar-border: #e5e7eb;
   --sidebar-ring: #9ca3af;
 
-  --expo-out: linear(0 0%,
-      0.1684 2.66%,
-      0.3165 5.49%,
-      0.446 8.52%,
-      0.5581 11.78%,
-      0.6535 15.29%,
-      0.7341 19.11%,
-      0.8011 23.3%,
-      0.8557 27.93%,
-      0.8962 32.68%,
-      0.9283 38.01%,
-      0.9529 44.08%,
-      0.9711 51.14%,
-      0.9833 59.06%,
-      0.991 67.74%,
-      0.9955 77.11%,
-      0.9982 87.11%,
-      1 100%);
+  --expo-out: linear(
+    0 0%,
+    0.1684 2.66%,
+    0.3165 5.49%,
+    0.446 8.52%,
+    0.5581 11.78%,
+    0.6535 15.29%,
+    0.7341 19.11%,
+    0.8011 23.3%,
+    0.8557 27.93%,
+    0.8962 32.68%,
+    0.9283 38.01%,
+    0.9529 44.08%,
+    0.9711 51.14%,
+    0.9833 59.06%,
+    0.991 67.74%,
+    0.9955 77.11%,
+    0.9982 87.11%,
+    1 100%
+  );
 }
 
 @media (width >=89rem) {
@@ -885,7 +901,6 @@
 }
 
 @layer base {
-
   *,
   ::after,
   ::before,
@@ -967,7 +982,7 @@
     counter-reset: line;
   }
 
-  [data-line-numbers]>[data-line]::before {
+  [data-line-numbers] > [data-line]::before {
     counter-increment: line;
     content: counter(line);
     @apply sticky left-0 inline-block w-16 bg-code pe-6 text-right text-sm text-code-number;
@@ -984,19 +999,29 @@
   [data-fade-overlay] {
     @apply pointer-events-none absolute top-0 right-0 z-1 rounded-tr-lg;
 
-    --fade-linear-gradient: linear-gradient(to right,
-        transparent 0,
-        color-mix(in oklab, var(--fade-color, var(--background)) 20%, transparent) 10px,
-        color-mix(in oklab, var(--fade-color, var(--background)) 50%, transparent) 25px,
-        color-mix(in oklab, var(--fade-color, var(--background)) 80%, transparent) 35px,
-        var(--fade-color, var(--background)) 45px);
+    --fade-linear-gradient: linear-gradient(
+      to right,
+      transparent 0,
+      color-mix(in oklab, var(--fade-color, var(--background)) 20%, transparent)
+        10px,
+      color-mix(in oklab, var(--fade-color, var(--background)) 50%, transparent)
+        25px,
+      color-mix(in oklab, var(--fade-color, var(--background)) 80%, transparent)
+        35px,
+      var(--fade-color, var(--background)) 45px
+    );
 
-    --fade-radial-gradient: radial-gradient(ellipse at top right,
-        var(--fade-color, var(--background)) 30%,
-        color-mix(in oklab, var(--fade-color, var(--background)) 80%, transparent) 40%,
-        color-mix(in oklab, var(--fade-color, var(--background)) 50%, transparent) 50%,
-        color-mix(in oklab, var(--fade-color, var(--background)) 20%, transparent) 60%,
-        transparent 70%);
+    --fade-radial-gradient: radial-gradient(
+      ellipse at top right,
+      var(--fade-color, var(--background)) 30%,
+      color-mix(in oklab, var(--fade-color, var(--background)) 80%, transparent)
+        40%,
+      color-mix(in oklab, var(--fade-color, var(--background)) 50%, transparent)
+        50%,
+      color-mix(in oklab, var(--fade-color, var(--background)) 20%, transparent)
+        60%,
+      transparent 70%
+    );
 
     width: var(--fade-width, 5rem);
     height: var(--fade-height, 2.25rem);
@@ -1005,7 +1030,6 @@
 }
 
 @keyframes wobble {
-
   0%,
   100% {
     rotate: 0deg;
@@ -1061,7 +1085,6 @@
 }
 
 @keyframes chat-dot-bounce {
-
   0%,
   100% {
     transform: translateY(0);
@@ -1076,14 +1099,16 @@
 
 @layer utilities {
   .bg-stripe-pattern {
-    background-image: linear-gradient(-45deg,
-        color-mix(in oklab, var(--foreground) 3%, transparent) 25%,
-        transparent 25%,
-        transparent 50%,
-        color-mix(in oklab, var(--foreground) 3%, transparent) 50%,
-        color-mix(in oklab, var(--foreground) 3%, transparent) 75%,
-        transparent 75%,
-        transparent);
+    background-image: linear-gradient(
+      -45deg,
+      color-mix(in oklab, var(--foreground) 3%, transparent) 25%,
+      transparent 25%,
+      transparent 50%,
+      color-mix(in oklab, var(--foreground) 3%, transparent) 50%,
+      color-mix(in oklab, var(--foreground) 3%, transparent) 75%,
+      transparent 75%,
+      transparent
+    );
     background-size: 8px 8px;
   }
 }

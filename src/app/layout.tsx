@@ -203,9 +203,9 @@ export default function RootLayout({
         <script dangerouslySetInnerHTML={{ __html: themeColorBootstrap }} />
         <link
           rel="preload"
-          href="/fonts/geist-sans-latin.woff2"
+          href="/fonts/sf-compact-display-regular.otf"
           as="font"
-          type="font/woff2"
+          type="font/otf"
           crossOrigin="anonymous"
         />
         <script
