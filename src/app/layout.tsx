@@ -203,7 +203,7 @@ export default function RootLayout({
         <script dangerouslySetInnerHTML={{ __html: themeColorBootstrap }} />
         <link
           rel="preload"
-          href="/fonts/sf-compact-display-regular.otf"
+          href="/fonts/sf-pro-display-regular.otf"
           as="font"
           type="font/otf"
           crossOrigin="anonymous"
