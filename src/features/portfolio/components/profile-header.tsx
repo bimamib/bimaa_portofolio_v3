@@ -53,7 +53,7 @@ export function ProfileHeader() {
           </p>
         </div>
 
-        <p className="mt-4 max-w-2xl text-sm leading-relaxed text-foreground sm:text-base">
+        <p className="mt-4 max-w-2xl text-justify text-sm leading-relaxed text-foreground sm:text-base">
           {l(USER.about, USER.aboutId)}
         </p>
 
@@ -73,7 +73,7 @@ export function ProfileHeader() {
             className="inline-flex items-center gap-1.5 transition-colors hover:text-foreground"
           >
             <Globe2 className="size-4" aria-hidden />
-            zickrian.dev
+            bimamib.dev
           </a>
         </div>
 
