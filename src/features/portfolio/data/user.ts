@@ -1,16 +1,16 @@
 import type { User } from "@/features/portfolio/types/user"
 
 export const USER: User = {
-  firstName: "Firdaus",
-  lastName: "Khotibul Zickrian",
-  displayName: "Firdaus Khotibul Zickrian",
-  username: "zickrian",
+  firstName: "Bima",
+  lastName: "Prasetio",
+  displayName: "Bima Prasetio",
+  username: "bimamib",
   gender: "male",
   pronouns: "he/him",
 
-  bio: "I'm Firdaus Khotibul Zickrian, an AI Engineer based in Indonesia building practical machine learning systems, data workflows, and modern full-stack web applications that turn ideas into impactful products.",
+  bio: "I'm Bima Prasetio, an AI Engineer based in Indonesia building practical machine learning systems, data workflows, and modern full-stack web applications that turn ideas into impactful products.",
   bioId:
-    "Saya Firdaus Khotibul Zickrian, seorang AI Engineer yang berbasis di Indonesia, membangun sistem machine learning yang praktis, alur kerja data, dan aplikasi web full-stack modern yang mengubah ide menjadi produk yang berdampak.",
+    "Saya Bima Prasetio, seorang AI Engineer yang berbasis di Indonesia, membangun sistem machine learning yang praktis, alur kerja data, dan aplikasi web full-stack modern yang mengubah ide menjadi produk yang berdampak.",
 
   flipSentences: [
     "AI / ML Engineer",
@@ -47,12 +47,12 @@ export const USER: User = {
   about: `I'm an AI Engineer based in Indonesia, specializing in building practical machine learning systems, data workflows, and modern full-stack web applications. I focus on developing reliable, end-to-end solutions that turn complex ideas into intuitive products designed for real-world impact.`,
   aboutId: `Saya seorang AI Engineer yang berbasis di Indonesia, dengan spesialisasi dalam membangun sistem machine learning yang praktis, alur kerja data, dan aplikasi web full-stack modern. Saya fokus mengembangkan solusi end-to-end yang andal, yang mengubah ide-ide kompleks menjadi produk intuitif yang dirancang untuk memberikan dampak nyata.`,
 
-  avatar: "/image/profile.webp",
+  avatar: "/image/bimss.webp",
   ogImage: "/image/og.png",
   sameAs: [
-    "https://www.zickrian.dev",
-    "https://github.com/zickrian",
-    "https://linkedin.com/in/firdauskhotibulzickrian/",
+    // "https://www.zickrian.dev",
+    "https://github.com/bimamib",
+    "https://linkedin.com/in/bimamib/",
     "https://medium.com/@zickriann",
     "https://huggingface.co/zickrian",
     "https://www.pinterest.com/espejodaniel50/",
