@@ -38,8 +38,8 @@ export const MAIN_NAV: NavItem[] = [
   },
 ]
 
-export const X_HANDLE = "@zickrian"
-export const GITHUB_USERNAME = "zickrian"
+export const X_HANDLE = "@bimamib"
+export const GITHUB_USERNAME = "bimamib"
 export const UTM_PARAMS = {
-  utm_source: "zickrian",
+  utm_source: "bimamib",
 }
