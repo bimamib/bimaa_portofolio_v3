@@ -106,7 +106,9 @@ export function AwardItem({
       {canExpand && (
         <CollapsibleContent className="overflow-hidden">
           <Prose className="border-t border-line p-4">
-            <Markdown>{l(award.description ?? "", award.descriptionId)}</Markdown>
+            <Markdown>
+              {l(award.description ?? "", award.descriptionId)}
+            </Markdown>
           </Prose>
         </CollapsibleContent>
       )}
