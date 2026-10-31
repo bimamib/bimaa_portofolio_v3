@@ -1,15 +1,15 @@
 @import "tailwindcss";
 
 @font-face {
-  font-family: "SFPro";
-  src: url("/fonts/sf-pro-display-regular.otf") format("opentype");
+  font-family: "Roboto";
+  src: url("/fonts/roboto-regular.ttf") format("truetype");
   font-display: swap;
   font-style: normal;
   font-weight: 100 900;
 }
 
 @font-face {
-  font-family: "SFPro Fallback";
+  font-family: "Roboto Regular Fallback";
   src: local("Arial");
   ascent-override: 94.56%;
   descent-override: 27.76%;
@@ -18,23 +18,23 @@
 }
 
 @font-face {
-  font-family: "SFMono";
-  src: url("/fonts/sf-mono-regular.otf") format("opentype");
+  font-family: "Roboto Mono";
+  src: url("/fonts/roboto-mono-regular.ttf") format("truetype");
   font-display: swap;
   font-style: normal;
   font-weight: 100 900;
 }
 
 @font-face {
-  font-family: "Caveat";
-  src: url("/fonts/caveat-latin.woff2") format("woff2");
+  font-family: "Petit Formal Script";
+  src: url("/fonts/petitformalscript-regular.ttf") format("truetype");
   font-display: swap;
   font-style: normal;
   font-weight: 400 500;
 }
 
 @font-face {
-  font-family: "Caveat Fallback";
+  font-family: "Petit Formal Script Fallback";
   src: local("Arial");
   ascent-override: 124.77%;
   descent-override: 38.99%;
@@ -764,11 +764,12 @@
 }
 
 :root {
-  --font-sans: "SFPro", "SFPro Fallback", Arial, sans-serif;
+  --font-sans: "Roboto", "Roboto Fallback", Arial, sans-serif;
   --font-mono:
-    "SFMono", ui-monospace, "SFMono", "Roboto Mono", Menlo, Monaco,
-    "Liberation Mono", "DejaVu Sans Mono", "Courier New", monospace;
-  --font-handwritten: "Caveat", "Caveat Fallback", cursive;
+    "Roboto Mono", ui-monospace, Menlo, Monaco, "Liberation Mono",
+    "DejaVu Sans Mono", "Courier New", monospace;
+  --font-handwritten:
+    "Petit Formal Script", "Petit Formal Script Fallback", cursive;
 
   /* Height of the fixed fade/blur overlay at the bottom of the viewport */
   --fade-bottom-height: --spacing(24);

@@ -203,9 +203,9 @@ export default function RootLayout({
         <script dangerouslySetInnerHTML={{ __html: themeColorBootstrap }} />
         <link
           rel="preload"
-          href="/fonts/sf-pro-display-regular.otf"
+          href="/fonts/roboto-regular.ttf"
           as="font"
-          type="font/otf"
+          type="font/ttf"
           crossOrigin="anonymous"
         />
         <script
