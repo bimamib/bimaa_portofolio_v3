@@ -8,6 +8,7 @@ export const TECH_STACK: TechStack[] = [
     title: "Python",
     href: "https://www.python.org/",
     iconId: "python",
+    color: "#3776AB",
     categories: ["AI / ML"],
   },
   {
@@ -15,6 +16,7 @@ export const TECH_STACK: TechStack[] = [
     title: "TensorFlow",
     href: "https://www.tensorflow.org/",
     iconId: "tensorflow",
+    color: "#FF6F00",
     categories: ["AI / ML"],
   },
   {
@@ -22,6 +24,7 @@ export const TECH_STACK: TechStack[] = [
     title: "PyTorch",
     href: "https://pytorch.org/",
     iconId: "pytorch",
+    color: "#EE4C2C",
     categories: ["AI / ML"],
   },
   {
@@ -29,6 +32,7 @@ export const TECH_STACK: TechStack[] = [
     title: "Keras",
     href: "https://keras.io/",
     iconId: "keras",
+    color: "#D00000",
     categories: ["AI / ML"],
   },
   {
@@ -36,6 +40,7 @@ export const TECH_STACK: TechStack[] = [
     title: "Scikit-Learn",
     href: "https://scikit-learn.org/",
     iconId: "scikitlearn",
+    color: "#F7931E",
     categories: ["AI / ML"],
   },
   {
@@ -43,6 +48,7 @@ export const TECH_STACK: TechStack[] = [
     title: "OpenCV",
     href: "https://opencv.org/",
     iconId: "opencv",
+    color: "#5C3EE8",
     categories: ["AI / ML"],
   },
   {
@@ -50,6 +56,7 @@ export const TECH_STACK: TechStack[] = [
     title: "Pandas",
     href: "https://pandas.pydata.org/",
     iconId: "pandas",
+    color: "#150458",
     categories: ["AI / ML"],
   },
   {
@@ -57,6 +64,7 @@ export const TECH_STACK: TechStack[] = [
     title: "NumPy",
     href: "https://numpy.org/",
     iconId: "numpy",
+    color: "#4DABCF",
     categories: ["AI / ML"],
   },
   {
@@ -64,6 +72,7 @@ export const TECH_STACK: TechStack[] = [
     title: "Matplotlib",
     href: "https://matplotlib.org/",
     iconId: "plotly",
+    color: "#11557C",
     categories: ["AI / ML"],
   },
   {
@@ -71,6 +80,7 @@ export const TECH_STACK: TechStack[] = [
     title: "MLflow",
     href: "https://mlflow.org/",
     iconId: "mlflow",
+    color: "#0194E2",
     categories: ["AI / ML"],
   },
   {
@@ -78,6 +88,7 @@ export const TECH_STACK: TechStack[] = [
     title: "Streamlit",
     href: "https://streamlit.io/",
     iconId: "streamlit",
+    color: "#FF4B4B",
     categories: ["AI / ML"],
   },
   {
@@ -85,6 +96,7 @@ export const TECH_STACK: TechStack[] = [
     title: "Hugging Face",
     href: "https://huggingface.co/",
     iconId: "huggingface",
+    color: "#FFBD4F",
     categories: ["AI / ML"],
   },
   {
@@ -92,6 +104,7 @@ export const TECH_STACK: TechStack[] = [
     title: "LangChain",
     href: "https://www.langchain.com/",
     iconId: "langchain",
+    color: "#1C3C3C",
     categories: ["AI / ML"],
   },
   {
@@ -99,6 +112,7 @@ export const TECH_STACK: TechStack[] = [
     title: "Claude",
     href: "https://claude.ai/",
     iconId: "claude",
+    color: "#D97757",
     categories: ["AI / ML"],
   },
   {
@@ -106,6 +120,7 @@ export const TECH_STACK: TechStack[] = [
     title: "ChatGPT",
     href: "https://chatgpt.com/",
     iconId: "chatgpt",
+    color: "#10A37F",
     categories: ["AI / ML"],
   },
   {
@@ -113,6 +128,7 @@ export const TECH_STACK: TechStack[] = [
     title: "Gemini",
     href: "https://gemini.google.com/",
     iconId: "gemini",
+    color: "#8E75FF",
     categories: ["AI / ML"],
   },
 
@@ -122,6 +138,7 @@ export const TECH_STACK: TechStack[] = [
     title: "JavaScript",
     href: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
     iconId: "js",
+    color: "#F7DF1E",
     categories: ["Frontend"],
   },
   {
@@ -129,6 +146,7 @@ export const TECH_STACK: TechStack[] = [
     title: "TypeScript",
     href: "https://www.typescriptlang.org/",
     iconId: "typescript",
+    color: "#3178C6",
     categories: ["Frontend"],
   },
   {
@@ -136,6 +154,7 @@ export const TECH_STACK: TechStack[] = [
     title: "React",
     href: "https://react.dev/",
     iconId: "react",
+    color: "#61DAFB",
     categories: ["Frontend"],
   },
   {
@@ -143,6 +162,7 @@ export const TECH_STACK: TechStack[] = [
     title: "Next.js",
     href: "https://nextjs.org/",
     iconId: "nextjs2",
+    color: "#FFFFFF",
     categories: ["Frontend"],
   },
   {
@@ -150,6 +170,7 @@ export const TECH_STACK: TechStack[] = [
     title: "Tailwind CSS",
     href: "https://tailwindcss.com/",
     iconId: "tailwindcss",
+    color: "#06B6D4",
     categories: ["Frontend"],
   },
 
@@ -159,6 +180,7 @@ export const TECH_STACK: TechStack[] = [
     title: "Node.js",
     href: "https://nodejs.org/",
     iconId: "nodejs",
+    color: "#5FA04E",
     categories: ["Backend"],
   },
   {
@@ -166,6 +188,7 @@ export const TECH_STACK: TechStack[] = [
     title: "Bun",
     href: "https://bun.sh/",
     iconId: "bun",
+    color: "#F9F1E1",
     categories: ["Backend"],
   },
   {
@@ -173,6 +196,7 @@ export const TECH_STACK: TechStack[] = [
     title: "SQL",
     href: "https://www.iso.org/standard/76583.html",
     iconId: "mysql",
+    color: "#4479A1",
     categories: ["Backend"],
   },
   {
@@ -180,6 +204,7 @@ export const TECH_STACK: TechStack[] = [
     title: "C++",
     href: "https://isocpp.org/",
     iconId: "cplusplus",
+    color: "#00599C",
     categories: ["Backend"],
   },
   {
@@ -187,6 +212,7 @@ export const TECH_STACK: TechStack[] = [
     title: "FastAPI",
     href: "https://fastapi.tiangolo.com/",
     iconId: "fastapi",
+    color: "#009688",
     categories: ["Backend"],
   },
   {
@@ -194,6 +220,7 @@ export const TECH_STACK: TechStack[] = [
     title: "PostgreSQL",
     href: "https://www.postgresql.org",
     iconId: "postgresql",
+    color: "#4169E1",
     categories: ["Backend"],
   },
 
@@ -203,6 +230,7 @@ export const TECH_STACK: TechStack[] = [
     title: "Docker",
     href: "https://www.docker.com/",
     iconId: "docker",
+    color: "#2496ED",
     categories: ["DevOps / Cloud"],
   },
   {
@@ -210,6 +238,7 @@ export const TECH_STACK: TechStack[] = [
     title: "Microsoft Azure",
     href: "https://azure.microsoft.com/en-us/",
     iconId: "microsoftazure",
+    color: "#0078D4",
     categories: ["DevOps / Cloud"],
   },
   {
@@ -217,6 +246,7 @@ export const TECH_STACK: TechStack[] = [
     title: "GitHub",
     href: "https://github.com/",
     iconId: "github",
+    color: "#F0F0F0",
     categories: ["DevOps / Cloud"],
   },
   {
@@ -224,6 +254,7 @@ export const TECH_STACK: TechStack[] = [
     title: "Prometheus",
     href: "https://prometheus.io/",
     iconId: "prometheus",
+    color: "#E6522C",
     categories: ["DevOps / Cloud"],
   },
   {
@@ -231,6 +262,7 @@ export const TECH_STACK: TechStack[] = [
     title: "Grafana",
     href: "https://grafana.com/",
     iconId: "grafana",
+    color: "#F46800",
     categories: ["DevOps / Cloud"],
   },
   {
@@ -238,6 +270,7 @@ export const TECH_STACK: TechStack[] = [
     title: "Visual Studio Code",
     href: "https://code.visualstudio.com/",
     iconId: "vscode",
+    color: "#007ACC",
     categories: ["DevOps / Cloud"],
   },
 ]

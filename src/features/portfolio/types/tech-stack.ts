@@ -3,5 +3,6 @@ export type TechStack = {
   title: string
   href: string
   iconId: string
+  color: string
   categories: string[]
 }
