@@ -5,7 +5,15 @@
   src: url("/fonts/roboto-regular.ttf") format("truetype");
   font-display: swap;
   font-style: normal;
-  font-weight: 100 900;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("/fonts/roboto-bold.ttf") format("truetype");
+  font-display: swap;
+  font-style: normal;
+  font-weight: 700;
 }
 
 @font-face {

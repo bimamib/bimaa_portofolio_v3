@@ -121,8 +121,10 @@ export function ExperiencePositionItem({
 
       <CollapsibleContent className="overflow-hidden">
         {position.description && (
-          <Prose className="pt-2 pl-9">
-            <Markdown>{l(position.description, position.descriptionId)}</Markdown>
+          <Prose className="pt-2 pl-7 text-justify [&_strong]:font-bold">
+            <Markdown>
+              {l(position.description, position.descriptionId)}
+            </Markdown>
           </Prose>
         )}
       </CollapsibleContent>
