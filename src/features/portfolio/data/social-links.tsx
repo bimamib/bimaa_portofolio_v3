@@ -28,9 +28,9 @@ export const SOCIAL_LINKS: SocialLink[] = [
     title: "Email",
     href: "mailto:bimaprast1601@gmail.com",
   },
-  {
-    icon: <Icons.huggingface />,
-    title: "Hugging Face",
-    href: "https://huggingface.co/bimamib",
-  },
+  // {
+  //   icon: <Icons.huggingface />,
+  //   title: "Hugging Face",
+  //   href: "https://huggingface.co/bimamib",
+  // },
 ]

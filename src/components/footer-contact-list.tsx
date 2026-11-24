@@ -128,7 +128,7 @@ function GitHubCard({
   data: GitHubSocialCard | null
   icon: React.ReactNode
 }) {
-  if (!data) return <PlainCard handle="@zickrian" icon={icon} />
+  if (!data) return <PlainCard handle="@bimamib" icon={icon} />
 
   const width = data.weeks * (BLOCK + GAP) - GAP
   const height = ROWS * (BLOCK + GAP) - GAP
@@ -155,7 +155,7 @@ function GitHubCard({
         ))}
       </svg>
 
-      <div className="flex items-center justify-between gap-3 border-t border-line pt-2.5 font-mono text-[0.6875rem] tracking-[0.02em] text-muted-foreground tabular-nums animate-card-content">
+      <div className="flex animate-card-content items-center justify-between gap-3 border-t border-line pt-2.5 font-mono text-[0.6875rem] tracking-[0.02em] text-muted-foreground tabular-nums">
         <span>
           <b className="font-medium text-foreground">
             {data.contributions.toLocaleString("en-US")}
@@ -198,7 +198,7 @@ function LinkedInCard({ icon }: { icon: React.ReactNode }) {
   const job = USER.jobs[0]
 
   return (
-    <div className="flex gap-3 border-l-2 border-(--brand) pl-3 [--brand:color-mix(in_oklab,#0a66c2_55%,transparent)] animate-card-content">
+    <div className="flex animate-card-content gap-3 border-l-2 border-(--brand) pl-3 [--brand:color-mix(in_oklab,#0a66c2_55%,transparent)]">
       <div className="flex min-w-0 flex-1 flex-col gap-1.5">
         <Kicker>Profile</Kicker>
         <span className="text-sm font-medium text-foreground">
@@ -271,7 +271,7 @@ function MediumCard({
   icon: React.ReactNode
 }) {
   return (
-    <div className="flex flex-col gap-2 animate-card-content">
+    <div className="flex animate-card-content flex-col gap-2">
       <div className="flex items-center justify-between border-b border-line pb-2">
         <Kicker>Writing</Kicker>
         <Glyph icon={icon} />
@@ -298,7 +298,7 @@ function HuggingFaceCard({
   icon: React.ReactNode
 }) {
   return (
-    <div className="-m-2.5 overflow-hidden animate-card-content">
+    <div className="-m-2.5 animate-card-content overflow-hidden">
       <div className="flex items-center justify-between gap-2 border-b border-line bg-muted/40 px-3 py-2">
         <span className="font-mono text-xs tracking-[0.02em] text-foreground">
           {handle}
@@ -322,7 +322,7 @@ function PlainCard({
   icon: React.ReactNode
 }) {
   return (
-    <div className="flex items-center justify-between gap-3 animate-card-content">
+    <div className="flex animate-card-content items-center justify-between gap-3">
       <div className="flex min-w-0 flex-col">
         <span className="text-sm font-medium text-foreground">
           {USER.displayName}
@@ -385,7 +385,10 @@ function EnvelopeCard({ address }: { address: string }) {
         </span>
       </span>
 
-      <span className="envelope-postmark animate-stamp-pop" data-mark="26 JUL" />
+      <span
+        className="envelope-postmark animate-stamp-pop"
+        data-mark="26 JUL"
+      />
 
       <span className="envelope-address">
         <span>TO</span>
