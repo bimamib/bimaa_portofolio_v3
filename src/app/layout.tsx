@@ -122,6 +122,9 @@ export const metadata: Metadata = {
   description: profileDescription,
   keywords: USER.keywords,
   applicationName: SITE_INFO.name,
+  icons: {
+    icon: "/favicon.ico",
+  },
   referrer: "origin-when-cross-origin",
   manifest: "/manifest.webmanifest",
   authors: [
