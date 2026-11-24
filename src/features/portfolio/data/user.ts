@@ -8,21 +8,21 @@ export const USER: User = {
   gender: "male",
   pronouns: "he/him",
 
-  bio: "I'm Bima Prasetio, an AI Engineer based in Indonesia building practical machine learning systems, data workflows, and modern full-stack web applications that turn ideas into impactful products.",
+  bio: "I'm Bima Prasetio, a Front-End Web and Mobile Developer based in Indonesia. I build responsive web applications and intuitive mobile experiences, turning ideas into practical, user-friendly digital products.",
   bioId:
-    "Saya Bima Prasetio, seorang AI Engineer yang berbasis di Indonesia, membangun sistem machine learning yang praktis, alur kerja data, dan aplikasi web full-stack modern yang mengubah ide menjadi produk yang berdampak.",
+    "Saya Bima Prasetio, seorang Front-End Web dan Mobile Developer yang berbasis di Indonesia. Saya membangun aplikasi web responsif dan pengalaman mobile yang intuitif, mengubah ide menjadi produk digital yang praktis dan mudah digunakan.",
 
   flipSentences: [
-    "AI / ML Engineer",
-    "AI & Data Scientist",
-    "Full Stack Developer",
-    "Data Analyst",
+    "Front-End Web Developer",
+    "Mobile Developer",
+    "Responsive UI Developer",
+    "User Experience Builder",
   ],
   flipSentencesId: [
-    "AI / ML Engineer",
-    "AI & Data Scientist",
-    "Pengembang Full Stack",
-    "Analis Data",
+    "Front-End Web Developer",
+    "Mobile Developer",
+    "Pengembang UI Responsif",
+    "Perancang Pengalaman Pengguna",
   ],
 
   address: "Indonesia",
@@ -30,22 +30,22 @@ export const USER: User = {
   phone: "+62 851-5548-7647",
   website: "https://www.zickrian.dev",
 
-  jobTitle: "AI & Machine Learning Engineer",
-  seoTitle: "Firdaus Khotibul Zickrian | AI & Machine Learning Engineer",
+  jobTitle: "Front-End Web Developer",
+  seoTitle: "Bima Prasetio | Front-End Web Developer",
   seoDescription:
-    "I'm Firdaus Khotibul Zickrian, an AI and machine learning engineer from Indonesia. I build practical software, data products, and machine learning systems.",
+    "I'm Bima Prasetio, a Front-End Web Developer from Indonesia. I build responsive, user-friendly web applications with a focus on intuitive interfaces and polished digital experiences.",
 
   jobs: [
-    {
-      title: "AI Engineer Intern",
-      company: "PT Custompedia Creative Group",
-      website: "https://www.instagram.com/custompedia/",
-      experienceId: "custompedia",
-    },
+    // {
+    //   title: "AI Engineer Intern",
+    //   company: "PT Custompedia Creative Group",
+    //   website: "https://www.instagram.com/custompedia/",
+    //   experienceId: "custompedia",
+    // },
   ],
 
-  about: `I'm an AI Engineer based in Indonesia, specializing in building practical machine learning systems, data workflows, and modern full-stack web applications. I focus on developing reliable, end-to-end solutions that turn complex ideas into intuitive products designed for real-world impact.`,
-  aboutId: `Saya seorang AI Engineer yang berbasis di Indonesia, dengan spesialisasi dalam membangun sistem machine learning yang praktis, alur kerja data, dan aplikasi web full-stack modern. Saya fokus mengembangkan solusi end-to-end yang andal, yang mengubah ide-ide kompleks menjadi produk intuitif yang dirancang untuk memberikan dampak nyata.`,
+  about: `I'm a Front-End Web and Mobile Developer based in Indonesia, specializing in building intuitive, responsive web applications and engaging mobile experiences. I focus on creating reliable, user-centered products that turn ideas into practical digital solutions.`,
+  aboutId: `Saya seorang Front-End Web dan Mobile Developer yang berbasis di Indonesia, dengan spesialisasi dalam membangun aplikasi web yang intuitif dan responsif serta pengalaman mobile yang menarik. Saya fokus menciptakan produk yang andal dan berorientasi pada pengguna, mengubah ide menjadi solusi digital yang praktis.`,
 
   avatar: "/image/bimss.webp",
   ogImage: "/image/og.png",
@@ -60,19 +60,20 @@ export const USER: User = {
   timeZone: "Asia/Jakarta",
 
   keywords: [
-    "Firdaus Khotibul Zickrian",
-    "zickrian",
-    "Firdaus Khotibul Zickrian portfolio",
-    "zickrian portfolio",
-    "AI engineer Indonesia",
-    "machine learning engineer Indonesia",
-    "AI and machine learning",
-    "full stack developer",
-    "data products",
-    "MLOps",
-    "computer vision",
-    "AI portfolio",
-    "machine learning portfolio",
+    "Bima Prasetio",
+    "bimsss",
+    "Bima Prasetio portfolio",
+    "bimsss portfolio",
+    "Front-End Web Developer Indonesia",
+    "Front-End Developer Indonesia",
+    "Mobile Developer Indonesia",
+    "web development",
+    "mobile development",
+    "responsive web applications",
+    "user interface development",
+    "React developer",
+    "front-end portfolio",
+    "mobile developer portfolio",
   ],
 
   // Full ISO 8601 datetimes: Schema.org dateCreated/dateModified expect a
