@@ -38,7 +38,7 @@ const pngBuffer = await sharp(webpBuffer)
   .toBuffer()
 
 const profileWebpBuffer = fs.readFileSync(
-  path.join(process.cwd(), "public/image/profile.webp")
+  path.join(process.cwd(), "public/image/bimss.webp")
 )
 
 const profilePngBuffer = await sharp(profileWebpBuffer)
