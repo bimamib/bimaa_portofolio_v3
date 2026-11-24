@@ -57,12 +57,12 @@ export function ProjectDetail({ project }: { project: Project }) {
       {/* Hero section */}
       <header className="space-y-6 px-4 pt-6 pb-8 md:px-8">
         {/* Title */}
-        <h1 className="text-3xl font-semibold tracking-tight text-balance md:text-4xl">
+        <h1 className="text-center text-3xl font-semibold tracking-tight text-balance md:text-4xl">
           {project.title}
         </h1>
 
         {/* Tagline */}
-        <p className="max-w-2xl leading-7 text-muted-foreground">
+        <p className="max-w-2xl text-justify leading-7 text-muted-foreground">
           {l(project.tagline, project.taglineId)}
         </p>
 
@@ -73,7 +73,7 @@ export function ProjectDetail({ project }: { project: Project }) {
               href={project.links.live}
               target="_blank"
               rel="noopener noreferrer nofollow"
-              className="inline-flex items-center gap-2 rounded-lg border border-line bg-card px-4 py-2 text-sm font-medium text-foreground transition-all hover:border-foreground/25 hover:bg-muted dark:border-transparent dark:bg-foreground dark:text-background dark:hover:opacity-90"
+              className="inline-flex items-center gap-2 rounded-lg border border-line bg-card px-4 py-2 text-sm font-medium text-foreground transition-[background-color,color,border-color,transform] duration-200 ease-out hover:-translate-y-0.5 hover:border-foreground/25 hover:bg-muted hover:text-foreground focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none active:translate-y-0"
             >
               <ExternalLinkIcon className="size-4" />
               {t.projectDetail.liveDemo}
@@ -90,7 +90,7 @@ export function ProjectDetail({ project }: { project: Project }) {
               href={project.links.repo}
               target="_blank"
               rel="noopener noreferrer nofollow"
-              className="inline-flex items-center gap-2 rounded-lg border border-line bg-card px-4 py-2 text-sm font-medium text-foreground transition-[background-color,color,border-color,transform] hover:-translate-y-0.5 hover:border-foreground/25 hover:bg-muted hover:text-foreground focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none"
+              className="inline-flex items-center gap-2 rounded-lg border border-line bg-card px-4 py-2 text-sm font-medium text-foreground transition-[background-color,color,border-color,transform] duration-200 ease-out hover:-translate-y-0.5 hover:border-foreground/25 hover:bg-muted hover:text-foreground focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none active:translate-y-0"
             >
               <Icons.github className="size-4" />
               {t.projectDetail.sourceCode}
@@ -158,28 +158,38 @@ export function ProjectDetail({ project }: { project: Project }) {
       <section className="relative grid gap-px border-b border-line bg-line sm:grid-cols-3">
         <MetaCard
           label={t.projectDetail.ownership}
-          value={l(project.collaboration.ownership, project.collaboration.ownershipId)}
+          value={l(
+            project.collaboration.ownership,
+            project.collaboration.ownershipId
+          )}
         />
         <MetaCard
           label={t.projectDetail.role}
           value={l(project.collaboration.role, project.collaboration.roleId)}
         />
-        <MetaCard label={t.projectDetail.team} value={project.collaboration.team} />
+        <MetaCard
+          label={t.projectDetail.team}
+          value={project.collaboration.team}
+        />
       </section>
 
       {/* My contributions */}
       <Section title={t.projectDetail.myRole}>
         <ul className="space-y-3">
-          {l(project.collaboration.contributions, project.collaboration.contributionsId).map(
-            (item, i) => (
-              <li key={i} className="flex items-baseline gap-3 text-sm leading-7">
-                <span className="mt-0.5 shrink-0 font-handwritten text-[1.1rem] tracking-wide text-muted-foreground">
-                  {String(i + 1).padStart(2, "0")}
-                </span>
-                <span>{item}</span>
-              </li>
-            )
-          )}
+          {l(
+            project.collaboration.contributions,
+            project.collaboration.contributionsId
+          ).map((item, i) => (
+            <li
+              key={i}
+              className="flex items-baseline gap-3 text-justify text-sm leading-7"
+            >
+              <span className="mt-0.5 shrink-0 font-handwritten text-[1.1rem] tracking-wide text-muted-foreground">
+                {String(i + 1).padStart(2, "0")}
+              </span>
+              <span>{item}</span>
+            </li>
+          ))}
         </ul>
       </Section>
 
@@ -187,7 +197,10 @@ export function ProjectDetail({ project }: { project: Project }) {
       <Section title={t.projectDetail.features}>
         <ul className="space-y-3">
           {l(project.features, project.featuresId).map((item, i) => (
-            <li key={i} className="flex items-baseline gap-3 text-sm leading-7">
+            <li
+              key={i}
+              className="flex items-baseline gap-3 text-justify text-sm leading-7"
+            >
               <span className="mt-0.5 shrink-0 font-handwritten text-[1.1rem] tracking-wide text-muted-foreground">
                 {String(i + 1).padStart(2, "0")}
               </span>
@@ -201,7 +214,10 @@ export function ProjectDetail({ project }: { project: Project }) {
       <Section title={t.projectDetail.impact}>
         <ul className="space-y-3">
           {l(project.impact, project.impactId).map((item, i) => (
-            <li key={i} className="flex items-baseline gap-3 text-sm leading-7">
+            <li
+              key={i}
+              className="flex items-baseline gap-3 text-justify text-sm leading-7"
+            >
               <span className="size-1.5 shrink-0 -translate-y-px rounded-full bg-foreground" />
               <span>{item}</span>
             </li>

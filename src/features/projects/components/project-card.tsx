@@ -23,71 +23,61 @@ const SHORT_PROJECT_NAMES: Record<
   string,
   { name: string; desc: string; descId?: string }
 > = {
-  naratioai: {
-    name: "Narratio AI",
-    desc: "Business Narrative Deck Generator",
-    descId: "Generator Deck Narasi Bisnis",
+  ngemeals: {
+    name: "Ngemeals",
+    desc: "Meal Discovery and Recipe Explorer",
+    descId: "Penjelajah Makanan dan Resep",
   },
-  custora: {
-    name: "Custora",
-    desc: "AI Customer Intelligence Platform",
-    descId: "Platform Intelijen Pelanggan AI",
+  bookshelfApps: {
+    name: "Bookshelf Apps",
+    desc: "Personal Book Collection Manager",
+    descId: "Pengelola Koleksi Buku Pribadi",
   },
-  leadsup: {
-    name: "LeadsUp",
-    desc: "Banking Lead Scoring Dashboard",
-    descId: "Dashboard Lead Scoring Perbankan",
+  githubUserApp: {
+    name: "GitHub User Finder",
+    desc: "Android GitHub Profile Explorer",
+    descId: "Penjelajah Profil GitHub Android",
   },
-  "base-realms": {
-    name: "Base Realms",
-    desc: "16-bit RPG Battle Game on Base",
-    descId: "Game Battle RPG 16-bit di Base",
+  "moosic-apps": {
+    name: "Moosic",
+    desc: "Music Discovery and Player App",
+    descId: "Aplikasi Penjelajah dan Pemutar Musik",
   },
-  polsekrembang: {
-    name: "Polsek Rembang",
-    desc: "RAG Public Service Assistant",
-    descId: "Asisten Layanan Publik RAG",
+  "notes-apps": {
+    name: "Notes Apps",
+    desc: "React Note Management App",
+    descId: "Aplikasi Pengelolaan Catatan React",
   },
-  "machine-learning-system": {
-    name: "ML System",
-    desc: "Vegetable Classification Pipeline",
-    descId: "Pipeline Klasifikasi Sayuran",
-  },
-  qmeal: {
-    name: "SmartCanteen",
-    desc: "AI Menu Recommendation Engine",
-    descId: "Mesin Rekomendasi Menu AI",
-  },
-  "financial-assistant-bot": {
-    name: "Finance Bot",
-    desc: "Personal Budgeting Assistant",
-    descId: "Asisten Anggaran Pribadi",
-  },
-  floodsegmen: {
-    name: "FloodSeg",
-    desc: "Aerial Flood Area Segmentation",
-    descId: "Segmentasi Area Banjir dari Udara",
-  },
-  "brazilian-ecommerce-dashboard": {
-    name: "Olist Analytics",
-    desc: "E-commerce Sales & Delivery Dashboard",
-    descId: "Dashboard Penjualan & Pengiriman E-commerce",
-  },
-  lostandfound: {
-    name: "SITEMU",
-    desc: "Campus Lost & Found Portal",
-    descId: "Portal Barang Hilang & Ditemukan Kampus",
-  },
-  "diabetes-classification": {
-    name: "Diabetes Predictor",
-    desc: "Health Screening & Early Risk Model",
-    descId: "Skrining Kesehatan & Model Risiko Dini",
-  },
-  imageclas: {
-    name: "Veggie Classifier",
-    desc: "Vegetable Image Recognition App",
-    descId: "Aplikasi Pengenalan Gambar Sayuran",
-  },
+  // "financial-assistant-bot": {
+  //   name: "Finance Bot",
+  //   desc: "Personal Budgeting Assistant",
+  //   descId: "Asisten Anggaran Pribadi",
+  // },
+  // floodsegmen: {
+  //   name: "FloodSeg",
+  //   desc: "Aerial Flood Area Segmentation",
+  //   descId: "Segmentasi Area Banjir dari Udara",
+  // },
+  // "brazilian-ecommerce-dashboard": {
+  //   name: "Olist Analytics",
+  //   desc: "E-commerce Sales & Delivery Dashboard",
+  //   descId: "Dashboard Penjualan & Pengiriman E-commerce",
+  // },
+  // lostandfound: {
+  //   name: "SITEMU",
+  //   desc: "Campus Lost & Found Portal",
+  //   descId: "Portal Barang Hilang & Ditemukan Kampus",
+  // },
+  // "diabetes-classification": {
+  //   name: "Diabetes Predictor",
+  //   desc: "Health Screening & Early Risk Model",
+  //   descId: "Skrining Kesehatan & Model Risiko Dini",
+  // },
+  // imageclas: {
+  //   name: "Veggie Classifier",
+  //   desc: "Vegetable Image Recognition App",
+  //   descId: "Aplikasi Pengenalan Gambar Sayuran",
+  // },
 }
 
 function parseProjectInfo(project: Project, language: Language) {
@@ -106,7 +96,10 @@ function parseProjectInfo(project: Project, language: Language) {
     const [name, ...rest] = project.title.split(" – ")
     return { name: name.trim(), desc: rest.join(" – ").trim() }
   }
-  return { name: project.title, desc: localize(language, project.tagline, project.taglineId) }
+  return {
+    name: project.title,
+    desc: localize(language, project.tagline, project.taglineId),
+  }
 }
 
 export function ProjectCard({
@@ -118,7 +111,9 @@ export function ProjectCard({
 }) {
   const { language } = useTranslation()
   const { name, desc } = parseProjectInfo(project, language)
-  const domain = getDisplayDomain(project.link || project.links.live || project.links.repo)
+  const domain = getDisplayDomain(
+    project.link || project.links.live || project.links.repo
+  )
 
   return (
     <div className="mx-3 border-b border-line/70 last:border-b-0 sm:mx-5">
@@ -128,7 +123,7 @@ export function ProjectCard({
         className="group -mx-2.5 flex items-start gap-3.5 rounded-xl px-2.5 py-3 transition-[background-color] duration-200 ease-out hover:bg-accent-muted focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none sm:gap-4 sm:py-3.5"
       >
         {/* Rectangular Image / Thumbnail */}
-        <div className="relative aspect-video w-20 shrink-0 overflow-hidden rounded-md border border-line bg-muted select-none mt-0.5 sm:w-20">
+        <div className="relative mt-0.5 aspect-video w-20 shrink-0 overflow-hidden rounded-md border border-line bg-muted select-none sm:w-20">
           <Image
             src={project.image}
             alt=""
@@ -145,7 +140,7 @@ export function ProjectCard({
         <div className="flex min-w-0 flex-1 flex-col gap-0.5 sm:flex-row sm:items-start sm:gap-4">
           {/* Name + Domain */}
           <div className="flex min-w-0 flex-col sm:w-56 sm:shrink-0 md:w-64">
-            <div className="flex items-center gap-1.5 text-sm font-semibold leading-snug text-foreground sm:text-base">
+            <div className="flex items-center gap-1.5 text-sm leading-snug font-semibold text-foreground sm:text-base">
               <span className="truncate">{name}</span>
               <ArrowUpRightIcon
                 className="size-3.5 shrink-0 text-muted-foreground transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-foreground"
@@ -160,7 +155,7 @@ export function ProjectCard({
           </div>
 
           {/* Description / Subtitle */}
-          <p className="min-w-0 flex-1 text-xs leading-snug text-muted-foreground line-clamp-2 mt-0.5 sm:mt-0.5 sm:text-sm">
+          <p className="mt-0.5 line-clamp-2 min-w-0 flex-1 text-xs leading-snug text-muted-foreground sm:mt-0.5 sm:text-sm">
             {desc}
           </p>
         </div>
