@@ -8,15 +8,17 @@ import { SITE_INFO } from "@/config/site"
 import { BlogPageContent } from "@/features/blog/components/blog-page-content"
 import { createPageMetadata } from "@/lib/seo"
 
-const title = "Notes on AI & Machine Learning"
+const title = "Notes on Front-End & Mobile Development"
 const description =
-  "I write about the tools, ideas, and lessons behind the AI and software projects I work on."
+  "I write about front-end web development, mobile development, and the tools and lessons behind the projects I build."
 const keywords = [
-  "Firdaus Khotibul Zickrian writing",
-  "zickrian blog",
-  "AI engineering writing",
-  "machine learning articles",
-  "software engineering blog",
+  "Bima Prasetio writing",
+  "Bima Prasetio blog",
+  "front-end development articles",
+  "web development writing",
+  "mobile development articles",
+  "React development",
+  "software development projects",
 ]
 
 function getBlogJsonLd() {
