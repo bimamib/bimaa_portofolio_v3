@@ -1,10 +1,10 @@
 {
-  "short_name": "Firdaus",
-  "name": "Firdaus Khotibul Zickrian",
-  "description": "Portfolio of Firdaus Khotibul Zickrian, an Indonesia-based Computer Science student focused on AI engineering, machine learning, and full-stack development.",
+  "short_name": "Bima",
+  "name": "Bima Prasetio",
+  "description": "Portfolio of Bima Prasetio, an Informatics Engineering graduate from Indonesia focused on front-end web development and mobile development.",
   "icons": [
     {
-      "src": "/icons/seo.webp",
+      "src": "/icons/bimss-seo.webp",
       "sizes": "900x900",
       "type": "image/webp",
       "purpose": "maskable"
