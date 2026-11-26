@@ -26,9 +26,9 @@ export const USER: User = {
   ],
 
   address: "Indonesia",
-  email: "ZmlyZGF1c2tob3RpYnVsemlja3JpYW5AZ21haWwuY29t", // base64 of firdauskhotibulzickrian@gmail.com
-  phone: "+62 851-5548-7647",
-  website: "https://www.zickrian.dev",
+  email: "YmltYXByYXN0MTYwMUBnbWFpbC5jb20=", // base64 of bimaprast1601@gmail.com
+  phone: "+62 812-1238-2274",
+  website: "localhost:3000",
 
   jobTitle: "Front-End Web Developer",
   seoTitle: "Bima Prasetio | Front-End Web Developer",
