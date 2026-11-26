@@ -47,8 +47,7 @@ function getClientIp(req: Request): string {
 }
 
 type IpRateLimitResult =
-  | { allowed: true }
-  | { allowed: false; resetInMs: number }
+  { allowed: true } | { allowed: false; resetInMs: number }
 
 function checkIpRateLimit(ip: string): IpRateLimitResult {
   const now = Date.now()
@@ -329,10 +328,10 @@ function buildSenderHtml(payload: ContactPayload) {
       <a href="${USER.website}" class="icon-link" title="Portfolio">
         <img src="https://img.icons8.com/ios-filled/100/71717a/domain.png" alt="Portfolio" width="24" height="24" />
       </a>
-      <a href="https://wa.me/6285155487647" class="icon-link" title="WhatsApp">
+      <a href="https://wa.me/6281212382274" class="icon-link" title="WhatsApp">
         <img src="https://img.icons8.com/ios-filled/100/71717a/whatsapp--v1.png" alt="WhatsApp" width="24" height="24" />
       </a>
-      <a href="https://linkedin.com/in/firdauskhotibulzickrian/" class="icon-link" title="LinkedIn">
+      <a href="https://linkedin.com/in/bimamib/" class="icon-link" title="LinkedIn">
         <img src="https://img.icons8.com/ios-filled/100/71717a/linkedin.png" alt="LinkedIn" width="24" height="24" />
       </a>
     </div>
