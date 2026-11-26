@@ -36,12 +36,7 @@ type ChatMessage = {
 }
 
 type EmailFlowStep =
-  | "idle"
-  | "filling_form"
-  | "formatting"
-  | "confirming"
-  | "sending"
-  | "done"
+  "idle" | "filling_form" | "formatting" | "confirming" | "sending" | "done"
 
 type EmailFlowData = {
   step: EmailFlowStep
@@ -63,7 +58,7 @@ const RECENT_MESSAGE_LIMIT = 4
 const STREAM_TOKEN_BATCH_SIZE = 2 // 1 word + 1 space
 const STREAM_BATCH_DELAY_MS = 12
 
-const BUDGET_KEY = "zickrian_ai_budget_data"
+const BUDGET_KEY = "bimss_ai_budget_data"
 const BUDGET_LIMIT = 6000
 const BUDGET_WINDOW_MS = 60 * 60 * 1000 // 1 hour
 const BUDGET_FLUSH_MS = 400
@@ -83,7 +78,7 @@ function isValidEmail(email: string) {
 
 // ─── Per-browser Rate Limit (localStorage) ───────────────────────────────────
 
-const RATE_LIMIT_KEY = "zickrian_email_rl"
+const RATE_LIMIT_KEY = "bimss_email_rl"
 const RATE_LIMIT_MAX = 3
 const RATE_LIMIT_WINDOW_MS = 60 * 60 * 1000 // 1 hour
 
@@ -788,7 +783,10 @@ export function ChatWidgetPanel() {
     if (!rl.allowed) {
       setIsChatActive(true)
       await injectAssistantMessage(
-        t.chat.sendingLimitReached(RATE_LIMIT_MAX, formatResetTime(rl.resetInMs))
+        t.chat.sendingLimitReached(
+          RATE_LIMIT_MAX,
+          formatResetTime(rl.resetInMs)
+        )
       )
       return
     }
@@ -866,9 +864,7 @@ export function ChatWidgetPanel() {
         formattedMessage: formatted.message,
       }))
 
-      await injectAssistantMessage(
-        t.chat.emailPreviewReady
-      )
+      await injectAssistantMessage(t.chat.emailPreviewReady)
     } catch (err) {
       const msg =
         err instanceof Error ? err.message : "Failed to format message."
@@ -884,7 +880,10 @@ export function ChatWidgetPanel() {
     if (!rl.allowed) {
       setEmailFlow((prev) => ({ ...prev, step: "idle" }))
       await injectAssistantMessage(
-        t.chat.sendingLimitReached(RATE_LIMIT_MAX, formatResetTime(rl.resetInMs))
+        t.chat.sendingLimitReached(
+          RATE_LIMIT_MAX,
+          formatResetTime(rl.resetInMs)
+        )
       )
       return
     }
@@ -960,7 +959,7 @@ export function ChatWidgetPanel() {
       await new Promise((resolve) => setTimeout(resolve, 600))
 
       await injectAssistantMessage(
-        "Waktu ngobrolku sudah habis nih! Kalau masih ada pertanyaan, yuk langsung DM Zickrian lewat tombol **Direct Message** di atas! 👆"
+        "Waktu ngobrolku sudah habis nih! Kalau masih ada pertanyaan, yuk langsung DM Bimss lewat tombol **Direct Message** di atas! 👆"
       )
       return
     }
@@ -1091,7 +1090,7 @@ export function ChatWidgetPanel() {
             <div className="animate-in fade-in slide-in-from-bottom-2 flex w-full flex-col duration-200">
               <div className="mb-2 flex items-center justify-between">
                 <h3 className="pl-1 text-[13px] font-semibold text-foreground/90">
-                  {t.chat.sendEmailToZickrian}
+                  {t.chat.sendEmailToBimss}
                 </h3>
                 <button
                   type="button"
@@ -1160,7 +1159,7 @@ export function ChatWidgetPanel() {
             }
             rows={emailFlow.step === "filling_form" ? 3 : 1}
             className={cn(
-              "max-h-32 min-h-11 min-w-0 flex-1 resize-none bg-transparent px-1 py-1 text-[16px] leading-6 font-medium text-wrap wrap-break-word text-foreground [-ms-overflow-style:none] [scrollbar-width:none] placeholder:text-muted-foreground focus:outline-none disabled:opacity-50 sm:text-[14px] [&::-webkit-scrollbar]:hidden"
+              "max-h-32 min-h-11 min-w-0 flex-1 resize-none [scrollbar-width:none] bg-transparent px-1 py-1 text-[16px] leading-6 font-medium text-wrap wrap-break-word text-foreground [-ms-overflow-style:none] placeholder:text-muted-foreground focus:outline-none disabled:opacity-50 sm:text-[14px] [&::-webkit-scrollbar]:hidden"
             )}
             onKeyDown={(e) => {
               if (e.key === "Enter" && !e.shiftKey) {
@@ -1312,7 +1311,7 @@ export function ChatWidgetPanel() {
               onClick={() => setBudgetOpen(!budgetOpen)}
             >
               <span className="flex items-center gap-1.5 font-handwritten text-[1.15rem] tracking-wide text-foreground select-none">
-                Zickrian
+                Bimss
                 <ChevronDownIcon
                   className={cn(
                     "size-4 text-muted-foreground transition-transform duration-200",
