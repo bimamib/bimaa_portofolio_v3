@@ -11,6 +11,7 @@
   "scripts": {
     "dev": "next dev",
     "prebuild": "node scripts/generate-tech-stack-icons.mjs",
+    "icons:generate": "node scripts/generate-tech-stack-icons.mjs",
     "build": "next build",
     "start": "next start",
     "preview": "next build && next start",
