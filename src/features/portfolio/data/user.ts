@@ -48,14 +48,14 @@ export const USER: User = {
   aboutId: `Saya seorang Front-End Web dan Mobile Developer yang berbasis di Indonesia, dengan spesialisasi dalam membangun aplikasi web yang intuitif dan responsif serta pengalaman mobile yang menarik. Saya fokus menciptakan produk yang andal dan berorientasi pada pengguna, mengubah ide menjadi solusi digital yang praktis.`,
 
   avatar: "/image/bimss.webp",
-  ogImage: "/image/og.png",
+  ogImage: "/image/og-1.png",
   sameAs: [
     "https://bimaa-portofolio-v3.vercel.app/",
     "https://github.com/bimamib",
     "https://linkedin.com/in/bimamib/",
-    "https://medium.com/@zickriann",
-    "https://huggingface.co/zickrian",
-    "https://www.pinterest.com/espejodaniel50/",
+    // "https://medium.com/@zickriann",
+    // "https://huggingface.co/zickrian",
+    // "https://www.pinterest.com/espejodaniel50/",
   ],
   timeZone: "Asia/Jakarta",
 
