@@ -37,6 +37,7 @@ const GALLERY_ITEMS: GalleryItem[] = [
     src: "/image/DTP-Meeting-1.webp",
     title: "Meeting Digital Technology and Productivity (DTP) team",
     date: "2024",
+    aspect: "wide",
   },
   // {
   //   src: "https://res.cloudinary.com/dujp9ydkx/video/upload/WhatsApp_Video_2026-05-11_at_13.12.10_pmvmgx",
