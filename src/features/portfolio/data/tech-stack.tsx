@@ -182,7 +182,7 @@ export const TECH_STACK: TechStack[] = [
     categories: ["Frontend"],
   },
   {
-    key: "vuejs",
+    key: "vuedotjs",
     title: "Vue.js",
     href: "https://vuejs.org/",
     iconId: "vuedotjs",
