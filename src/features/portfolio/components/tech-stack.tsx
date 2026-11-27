@@ -1,5 +1,7 @@
 "use client"
 
+import Image from "next/image"
+
 import { useTranslation } from "@/lib/i18n/use-translation"
 
 import { STACK_CATEGORIES, TECH_STACK } from "../data/tech-stack"
@@ -47,13 +49,40 @@ export function TechStack() {
                       rel="noopener"
                       className="flex h-(--badge-height) items-center justify-center gap-1.5 rounded-lg bg-muted/60 px-1.75 font-mono text-xs text-foreground inset-ring-1 inset-ring-border transition-colors hover:bg-muted/90 [&_svg]:pointer-events-none [&_svg]:size-3.5 [&_svg]:shrink-0 [&_svg]:text-muted-foreground/80"
                     >
-                      <svg
-                        viewBox="0 0 24 24"
-                        aria-hidden
-                        style={{ color: tech.color }}
-                      >
-                        <use href={`/icons/tech-stack-v1.svg#${tech.iconId}`} />
-                      </svg>
+                      {tech.iconId === "chatgpt" ? (
+                        <>
+                          <img
+                            src="/icons/chatgpt-light.svg"
+                            alt=""
+                            aria-hidden
+                            className="size-[20px] shrink-0 scale-[1.6] dark:hidden"
+                          />
+
+                          <img
+                            src="/icons/chatgpt-dark.svg"
+                            alt=""
+                            aria-hidden
+                            className="hidden size-[20px] shrink-0 scale-[1.6] dark:block"
+                          />
+                        </>
+                      ) : tech.iconId === "vscode" ? (
+                        <img
+                          src="/icons/vscode.svg"
+                          alt=""
+                          aria-hidden
+                          className="size-3.5 shrink-0"
+                        />
+                      ) : (
+                        <svg
+                          viewBox="0 0 24 24"
+                          aria-hidden
+                          style={{ color: tech.color }}
+                        >
+                          <use
+                            href={`/icons/tech-stack-v1.svg#${tech.iconId}`}
+                          />
+                        </svg>
+                      )}
                       {tech.title}
                     </a>
                   </li>
