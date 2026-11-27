@@ -28,7 +28,7 @@ export const USER: User = {
   address: "Indonesia",
   email: "YmltYXByYXN0MTYwMUBnbWFpbC5jb20=", // base64 of bimaprast1601@gmail.com
   phone: "+62 812-1238-2274",
-  website: "localhost:3000",
+  website: "http://bimss-portofolio.cloudvea.site/",
 
   jobTitle: "Front-End Web Developer",
   seoTitle: "Bima Prasetio | Front-End Web Developer",
