@@ -1,7 +1,5 @@
 "use client"
 
-import Image from "next/image"
-
 import { useTranslation } from "@/lib/i18n/use-translation"
 
 import { STACK_CATEGORIES, TECH_STACK } from "../data/tech-stack"
@@ -55,14 +53,14 @@ export function TechStack() {
                             src="/icons/chatgpt-light.svg"
                             alt=""
                             aria-hidden
-                            className="size-[20px] shrink-0 scale-[1.6] dark:hidden"
+                            className="size-4.5 shrink-0 scale-[1.35] dark:hidden"
                           />
 
                           <img
                             src="/icons/chatgpt-dark.svg"
                             alt=""
                             aria-hidden
-                            className="hidden size-[20px] shrink-0 scale-[1.6] dark:block"
+                            className="hidden size-4.5 shrink-0 scale-[1.35] dark:block"
                           />
                         </>
                       ) : tech.iconId === "vscode" ? (
