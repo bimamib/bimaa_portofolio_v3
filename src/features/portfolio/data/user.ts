@@ -50,7 +50,7 @@ export const USER: User = {
   avatar: "/image/bimss.webp",
   ogImage: "/image/og.png",
   sameAs: [
-    // "https://www.zickrian.dev",
+    "https://bimaa-portofolio-v3.vercel.app/",
     "https://github.com/bimamib",
     "https://linkedin.com/in/bimamib/",
     "https://medium.com/@zickriann",
