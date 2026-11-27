@@ -34,28 +34,28 @@ type GalleryItem = {
 
 const GALLERY_ITEMS: GalleryItem[] = [
   {
-    src: "/image/basee.webp",
-    title: "Base Realms hackathon project showcase",
-    date: "2025",
+    src: "/image/DTP-Meeting-1.webp",
+    title: "Meeting Digital Technology and Productivity (DTP) team",
+    date: "2024",
   },
-  {
-    src: "https://res.cloudinary.com/dujp9ydkx/video/upload/WhatsApp_Video_2026-05-11_at_13.12.10_pmvmgx",
-    title: "AI and software development journey video",
-    date: "2026",
-    type: "video",
-  },
-  {
-    src: "/image/picture1.webp",
-    title: "Technology event and project collaboration moment",
-    date: "2026",
-    aspect: "wide",
-  },
-  {
-    src: "/image/btng.webp",
-    title: "Behind-the-scenes software project work",
-    date: "2026",
-    aspect: "wide",
-  },
+  // {
+  //   src: "https://res.cloudinary.com/dujp9ydkx/video/upload/WhatsApp_Video_2026-05-11_at_13.12.10_pmvmgx",
+  //   title: "AI and software development journey video",
+  //   date: "2026",
+  //   type: "video",
+  // },
+  // {
+  //   src: "/image/picture1.webp",
+  //   title: "Technology event and project collaboration moment",
+  //   date: "2026",
+  //   aspect: "wide",
+  // },
+  // {
+  //   src: "/image/btng.webp",
+  //   title: "Behind-the-scenes software project work",
+  //   date: "2026",
+  //   aspect: "wide",
+  // },
 ]
 
 function getGalleryJsonLd() {
