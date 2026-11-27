@@ -185,7 +185,7 @@ export const TECH_STACK: TechStack[] = [
     key: "vuejs",
     title: "Vue.js",
     href: "https://vuejs.org/",
-    iconId: "vuejs",
+    iconId: "vuedotjs",
     color: "#4FC08D",
     categories: ["Frontend"],
   },
