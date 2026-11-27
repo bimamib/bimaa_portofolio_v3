@@ -83,9 +83,6 @@ importers:
       schema-dts:
         specifier: ^1.1.5
         version: 1.1.5
-      simple-icons:
-        specifier: ^16.38.1
-        version: 16.38.1
       tailwind-merge:
         specifier: ^3.3.1
         version: 3.3.1
@@ -138,6 +135,9 @@ importers:
       sharp:
         specifier: 0.35.3
         version: 0.35.3(@types/node@20.17.24)
+      simple-icons:
+        specifier: 16.30.0
+        version: 16.30.0
       tailwindcss:
         specifier: ^4.2.4
         version: 4.2.4
@@ -2995,8 +2995,8 @@ packages:
   siginfo@2.0.0:
     resolution: {integrity: sha512-ybx0WO1/8bSBLEWXZvEd7gMW3Sn3JFlW3TvX1nREbDLRNQNaeNN8WK0meBwPdAaOI7TtRRRJn/Es1zhrrCHu7g==}
 
-  simple-icons@16.38.1:
-    resolution: {integrity: sha512-q4JnGp1cgeASp4jzEsmSh/7BD/e2y7aYO8XST+QBEvOJ5wzZ/9WRmKsI+QUwkfPUSiXC+sfh2+QetD38zl3N0g==}
+  simple-icons@16.30.0:
+    resolution: {integrity: sha512-YX/HmgEqjpn5Zs3myzKp8ek5Ti+TdrkvNWn9skGLetg9tOg0cTjYizj9ESAYJn4xwc0GQYVGzQxBELDfbxq7WQ==}
     engines: {node: '>=0.12.18'}
 
   source-map-js@1.2.1:
@@ -6424,7 +6424,7 @@ snapshots:
 
   siginfo@2.0.0: {}
 
-  simple-icons@16.38.1: {}
+  simple-icons@16.30.0: {}
 
   source-map-js@1.2.1: {}
 

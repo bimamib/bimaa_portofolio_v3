@@ -174,10 +174,10 @@ export const TECH_STACK: TechStack[] = [
     categories: ["Frontend"],
   },
   {
-    key: "nextjs2",
+    key: "nextjs",
     title: "Next.js",
     href: "https://nextjs.org/",
-    iconId: "nextjs2",
+    iconId: "nextjs",
     color: "#FFFFFF",
     categories: ["Frontend"],
   },
